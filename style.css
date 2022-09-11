@@ -1,0 +1,214 @@
+:root {
+  --basic-grey: #f2f2f2;
+  --basic-blue: #383db7;
+  --basic-white: #fff;
+  --basic-black: #000;
+}
+
+body {
+  font-family: Oswald, sans-serif;
+  font-size: 14px;
+}
+
+/* Контейнер */
+.container {
+  padding: 0 20px;
+  max-width: 1440px;
+}
+
+.container_background {
+  background: var(--basic-white);
+  background: linear-gradient(0deg, var(--basic-white) 32.9%, var(--basic-blue) 32.9%);
+  padding-top: 66px;
+}
+
+/* Шапка */
+.header {
+  height: 66px;
+  width: 100%;
+  background-color: var(--basic-white);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+/* Логотип */
+.logo {
+  font-size: 30px;
+}
+
+/* Промо */
+.promo {
+  color: var(--basic-white);
+  padding-top: 42px;
+  text-align: center;
+  line-height: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+}
+
+.promo__text,
+.promo__img {
+  display: block;
+  width: 100%;
+}
+
+.promo__header {
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0 0 12px 0;
+  width: 100%;
+}
+
+.promo__img {
+  width: 250px;
+  height: 250px;
+  line-height: 500px;
+  margin-top: 55px;
+}
+
+.promo__button {
+  margin-top: 32px;
+}
+
+/* Кнопка */
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+  height: 40px;
+  text-decoration: none;
+}
+
+/* Футер */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 73px;
+  background-color: var(--basic-grey);
+}
+
+.footer__logo {
+  /* Шрифт некрасиво выравнивается по центру, поэтому немного правлю положение */
+  margin-top: -0.15em;
+}
+
+/* Планшет */
+@media screen and (min-width: 768px) {
+
+  /* Шапка */
+  .header {
+    position: static;
+    height: 50px;
+  }
+
+  /* Логотип */
+  .logo {
+    font-size: 40px;
+  }
+
+  /* Контейнер */
+  .container {
+    padding: 0 30px;
+  }
+
+  .container_background {
+    background: var(--basic-white);
+  }
+
+  /* Промо */
+  .container__promo {
+    margin-top: 93px;
+  }
+
+  .promo {
+    color: var(--basic-black);
+    padding: 0 23px 0 80px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .promo__header {
+    font-size: 60px;
+    margin-bottom: 21px;
+  }
+
+  .promo__text {
+    font-size: 20px;
+  }
+
+  .promo__img {
+    width: 512px;
+    height: 512px;
+    order: 1;
+    align-self: flex-end;
+    margin-top: -54px;
+  }
+
+  .promo__button {
+    z-index: 1;
+    width: auto;
+    padding: 0 3.2em;
+    margin-top: 90px;
+  }
+
+  /* Кнопка */
+  .button {
+    height: 54px;
+    font-size: 20px;
+  }
+
+  /* Футер */
+  .footer {
+    padding-left: 30px;
+    justify-content: flex-start;
+    height: 150px;
+  }
+}
+
+/* Десктоп */
+@media screen and (min-width: 1220px) {
+
+  /* Шапка */
+  .header {
+    background: none;
+    height: 60px;
+  }
+
+  /* Логотип */
+  .logo {
+    font-size: 60px;
+  }
+
+  /* Контейнер */
+  .container {
+    padding: 0 110px;
+  }
+
+  .container_background {
+    background: linear-gradient(90deg, var(--basic-white) 50%, var(--basic-blue) 50%);
+  }
+
+  /* Промо */
+  .promo {
+    padding: 0 80px;
+  }
+
+  .promo__img {
+    margin-top: -295px;
+    margin-bottom: -16px;
+    position: relative;
+    left: 9%;
+    align-self: center;
+  }
+
+  .promo__button {
+    margin-top: 110px;
+  }
+}
