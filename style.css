@@ -1,8 +1,10 @@
 :root {
   --basic-grey: #f2f2f2;
+  --special-grey-1: #d9d9d9;
   --basic-blue: #383db7;
   --basic-white: #fff;
   --basic-black: #000;
+  --light-blue: #6e63f6;
 }
 
 body {
@@ -14,12 +16,17 @@ body {
 .container {
   padding: 0 20px;
   max-width: 1440px;
+  overflow: hidden;
 }
 
 .container_background {
   background: var(--basic-white);
   background: linear-gradient(0deg, var(--basic-white) 32.9%, var(--basic-blue) 32.9%);
   padding-top: 66px;
+}
+
+.container_news {
+  margin-top: 20px;
 }
 
 /* Шапка */
@@ -83,6 +90,92 @@ body {
   color: var(--basic-white);
   height: 40px;
   text-decoration: none;
+}
+
+/* Новости */
+.news {
+  display: grid;
+  row-gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+.news-block {
+  background-color: var(--basic-grey);
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+.news-block__top,
+.news-block__text {
+  padding: 0 20px;
+}
+
+.news-block__top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.news-block__icon-wrap {
+  border-radius: 50%;
+  background-color: var(--light-blue);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-block__icon {
+  width: 42px;
+  height: 42px;
+}
+
+.news-block__header {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.news-block__text {
+  margin: 20px 0;
+  line-height: 1.3;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.news-block__link {
+  border-top: 1px solid var(--special-grey-1);
+  padding: 20px;
+  display: flex;
+  align-items: flex-end;
+  transition: background-color ease-out .3s;
+}
+
+.news-block__link:hover {
+  cursor: pointer;
+  background-color: var(--special-grey-1);
+}
+
+.arrow__line,
+.arrow__triangle {
+  transition: transform ease-out .3s;
+}
+
+.news-block__link:hover .arrow__line {
+  transform: scaleX(1.444444444);
+}
+
+.news-block__link:hover .arrow__triangle {
+  transform: translateX(8px);
+}
+
+.news-block__link-wrap {
+  text-decoration: none;
+  color: var(--basic-black);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 /* Футер */
