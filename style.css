@@ -1,6 +1,7 @@
 :root {
   --basic-grey: #f2f2f2;
   --special-grey-1: #d9d9d9;
+  --special-grey-2: #e6e6e6;
   --basic-blue: #383db7;
   --basic-white: #fff;
   --basic-black: #000;
@@ -41,6 +42,103 @@ a {
   position: fixed;
   left: 0;
   top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.header__logo {
+  width: 40px;
+  height: 40px;
+  margin-left: -3px;
+  margin-right: 10px;
+}
+
+.header__logo-text {
+  color: var(--basic-blue);
+}
+
+.header__menu-button {
+  background: none;
+  border: none;
+  height: 100%;
+  padding: 0 20px;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+
+.menu-button {
+  position: relative;
+  width: 24px;
+  height: 100%;
+}
+
+.menu-button__line {
+  position: absolute;
+  width: 24px;
+  height: 1.5px;
+  background-color: var(--basic-black);
+  transition: transform ease-in-out .2s, width, opacity ease-in-out .2s;
+}
+
+.menu-button__line_top {
+  top: calc(50% - 8.75px);
+}
+
+.menu-button__line_mid {
+  top: calc(50% - 0.75px);
+}
+
+.menu-button__line_bot {
+  top: calc(50% + 7.25px);
+}
+
+.menu-button_close .menu-button__line_top {
+  transform: translateY(8px) rotate(45deg);
+  width: 24.75px;
+}
+
+.menu-button_close .menu-button__line_mid {
+  /* transform: translateX(-50%); */
+  opacity: 0;
+}
+
+.menu-button_close .menu-button__line_bot {
+  transform: translateY(-8px) rotate(-45deg);
+  width: 24.75px;
+}
+
+.menu {
+  position: absolute;
+  top: 66px;
+  left: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  transition: transform ease-in-out .3s;
+}
+
+.menu_hidden {
+  transform: translateX(-100%);
+}
+
+.menu__item {
+  height: 66px;
+  background-color: var(--basic-white);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--special-grey-2);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--basic-black);
+}
+
+.menu__item:last-child {
+  border-bottom: 1px solid var(--special-grey-2);
 }
 
 /* Логотип */
