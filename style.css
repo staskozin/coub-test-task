@@ -118,6 +118,7 @@ a {
   padding: 0;
   margin: 0;
   transition: transform ease-in-out .3s;
+  border-bottom: 1px solid var(--special-grey-2);
 }
 
 .menu_hidden {
@@ -135,10 +136,6 @@ a {
   font-size: 20px;
   font-weight: 500;
   color: var(--basic-black);
-}
-
-.menu__item:last-child {
-  border-bottom: 1px solid var(--special-grey-2);
 }
 
 /* Логотип */
@@ -192,11 +189,12 @@ a {
   color: var(--basic-white);
   height: 40px;
   cursor: pointer;
-  transition: background ease-in .2s;
+  transition: background ease-out .2s;
 }
 
 .button:hover {
   background-color: var(--light-blue);
+  transition-duration: .1s;
 }
 
 /* Иконка */
@@ -281,6 +279,7 @@ a {
 .news-block__link:hover {
   cursor: pointer;
   background-color: var(--special-grey-1);
+  transition-duration: .2s;
 }
 
 .arrow__line,
@@ -377,6 +376,52 @@ a {
   .header {
     position: static;
     height: 50px;
+    margin-top: 40px;
+    padding: 0 40px;
+  }
+
+  .header__logo {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+  }
+
+  .header__logo-text {
+    margin-top: -0.15em;
+  }
+
+  .header__menu-button {
+    display: none;
+  }
+
+  .menu {
+    position: static;
+    display: flex;
+    gap: 60px;
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin-top: 20px;
+    border-bottom: none;
+    transform: none;
+  }
+
+  .menu__item {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    border-top: none;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.3;
+    padding: 0 16px 10px;
+    background: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    transition: border ease-out .3s;
+  }
+
+  .menu__item:hover {
+    border-bottom: 2px solid var(--basic-blue);
+    transition-duration: .2s;
   }
 
   /* Логотип */
@@ -574,6 +619,21 @@ a {
   .header {
     background: none;
     height: 60px;
+    padding: 0 20px;
+  }
+
+  .header__logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu__item {
+    font-size: 20px;
+    color: var(--basic-white);
+  }
+
+  .menu__item:hover {
+    border-bottom: 2px solid var(--basic-white);
   }
 
   /* Логотип */
@@ -660,5 +720,10 @@ a {
   .facts {
     margin-top: 70px;
     padding: 0 110px;
+  }
+
+  /* Футер */
+  .footer {
+    margin-top: 100px;
   }
 }
