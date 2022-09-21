@@ -1,0 +1,40 @@
+.container {
+  padding: 0 20px;
+  max-width: 1440px;
+  overflow: hidden;
+
+  &_top {
+    background: var(--basic-white);
+    background: linear-gradient(0deg, var(--basic-white) 32.9%, var(--basic-blue) 32.9%);
+    padding-top: 66px;
+  }
+
+  &_news {
+    margin-top: 20px;
+  }
+
+  &_footer {
+    background-color: var(--basic-grey);
+    margin-top: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 30px;
+
+    &_top {
+      background: var(--basic-white);
+    }
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .container {
+    padding: 0 110px;
+
+    &_top {
+      background: linear-gradient(90deg, var(--basic-white) 50%, var(--basic-blue) 50%);
+    }
+  }
+}

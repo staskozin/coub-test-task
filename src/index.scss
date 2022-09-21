@@ -1,0 +1,25 @@
+:root {
+  --basic-grey: #f2f2f2;
+  --special-grey-1: #d9d9d9;
+  --special-grey-2: #e6e6e6;
+  --basic-blue: #383db7;
+  --basic-white: #fff;
+  --basic-black: #000;
+  --light-blue: #6e63f6;
+}
+
+body {
+  font-family: Oswald, sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
