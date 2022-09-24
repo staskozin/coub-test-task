@@ -23,7 +23,7 @@
   color: var(--basic-blue);
 }
 
-.header__menu-button {
+.header__button {
   background: none;
   border: none;
   height: 100%;
@@ -32,45 +32,37 @@
   box-sizing: content-box;
 }
 
-.menu-button {
+.button {
   position: relative;
   width: 24px;
   height: 100%;
 }
 
-.menu-button__line {
+.button__line {
   position: absolute;
   width: 24px;
   height: 1.5px;
   background-color: var(--basic-black);
-  transition: transform ease-in-out 0.2s, width, opacity ease-in-out 0.2s;
-}
-
-.menu-button__line_top {
-  top: calc(50% - 8.75px);
-}
-
-.menu-button__line_mid {
+  transition: transform ease-in-out 0.2s, background-color ease-in-out 0.2s;
   top: calc(50% - 0.75px);
-}
 
-.menu-button__line_bot {
-  top: calc(50% + 7.25px);
-}
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 1.5px;
+    background-color: var(--basic-black);
+    transition: transform ease-in-out 0.2s, width ease-in-out 0.2s;
+  }
 
-.menu-button_close .menu-button__line_top {
-  transform: translateY(8px) rotate(45deg);
-  width: 24.75px;
-}
+  &::before {
+    top: calc(50% - 8.75px);
+  }
 
-.menu-button_close .menu-button__line_mid {
-  /* transform: translateX(-50%); */
-  opacity: 0;
-}
-
-.menu-button_close .menu-button__line_bot {
-  transform: translateY(-8px) rotate(-45deg);
-  width: 24.75px;
+  &::after {
+    top: calc(50% + 7.25px);
+  }
 }
 
 .menu {
@@ -82,9 +74,6 @@
   margin: 0;
   transition: transform ease-in-out 0.3s;
   border-bottom: 1px solid var(--special-grey-2);
-}
-
-.menu_hidden {
   transform: translateX(-100%);
 }
 
@@ -106,6 +95,28 @@
   font-size: 30px;
 }
 
+.toggle {
+  display: none;
+}
+
+.toggle:checked~.menu {
+  transform: translateX(0%);
+}
+
+.toggle:checked~.button .button__line {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.toggle:checked~.button .button__line::before {
+  transform: translateY(8px) rotate(45deg);
+  width: 24.75px;
+}
+
+.toggle:checked~.button .button__line::after {
+  transform: translateY(-8px) rotate(-45deg);
+  width: 24.75px;
+}
+
 @media screen and (min-width: 768px) {
   .header {
     position: static;
@@ -124,7 +135,7 @@
     margin-top: -0.15em;
   }
 
-  .header__menu-button {
+  .header__button {
     display: none;
   }
 
@@ -137,6 +148,7 @@
     margin-top: 20px;
     border-bottom: none;
     transform: none;
+    transition: none;
   }
 
   .menu__item {
