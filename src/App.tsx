@@ -1,4 +1,4 @@
-import Container from './component/Container'
+import Container from './component/ui/Container'
 import Header from './component/block/Header'
 import Promo from './component/block/Promo'
 import News from './component/block/News'

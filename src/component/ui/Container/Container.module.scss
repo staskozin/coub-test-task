@@ -13,6 +13,11 @@
     margin-top: 20px;
   }
 
+  &_facts {
+    margin-top: 33px;
+    padding: 0 30px 0 20px;
+  }
+
   &_footer {
     background-color: var(--basic-grey);
     margin-top: auto;
@@ -26,6 +31,15 @@
     &_top {
       background: var(--basic-white);
     }
+
+    &_news {
+      margin-top: 70px;
+    }
+
+    &_facts {
+      margin-top: 40px;
+      padding: 0 30px;
+    }
   }
 }
 
@@ -35,6 +49,11 @@
 
     &_top {
       background: linear-gradient(90deg, var(--basic-white) 50%, var(--basic-blue) 50%);
+    }
+
+    &_facts {
+      margin-top: 70px;
+      padding: 0 110px;
     }
   }
 }

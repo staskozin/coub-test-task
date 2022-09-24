@@ -1,0 +1,23 @@
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+  height: 40px;
+  cursor: pointer;
+  transition: background ease-out 0.2s;
+}
+
+.button:hover {
+  background-color: var(--light-blue);
+  transition-duration: 0.1s;
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    height: 54px;
+    font-size: 20px;
+  }
+}
