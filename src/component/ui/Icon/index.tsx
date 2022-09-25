@@ -6,7 +6,7 @@ export default function Icon(props: IconProps) {
       <img
         src={`img/${props.name}.png`}
         alt={props.name}
-        className={props.iconClassName !== undefined ? props.iconClassName : ''}
+        className={props.iconClassName ? props.iconClassName : ''}
       />
     </div>
   )

@@ -1,21 +1,33 @@
+import Menu, { MenuItem } from '../../ui/Menu'
 import s from './Header.module.scss'
 
 export default function Header() {
+  const menuItems: Array<MenuItem> = [
+    {
+      href: 'stub.html',
+      text: 'TEXT',
+      id: 1
+    },
+    {
+      href: 'stub.html',
+      text: 'TEXT_TEXT',
+      id: 2
+    },
+    {
+      href: 'stub.html',
+      text: 'TEXT_TEXT_TEXT',
+      id: 3
+    }
+  ]
+
   return (
     <header className={s.header}>
-      <a href="index.html">
-        <img src="img/logo.png" alt="LOGO" className={s.header__logo} />
+      <a className={s['logo-icon-wrap']} href="index.html">
+        <img src="img/logo.png" className={s['logo-icon']} alt="LOGO" />
       </a>
-      <a href="index.html" className={`${s.logo} ${s['header__logo-text']}`}>LOGO</a>
-      <input type="checkbox" className={s.toggle} id="menu-toggle" />
-      <label className={`${s.button} ${s.header__button}`} title="menu" role="button" htmlFor="menu-toggle">
-        <div className={s.button__line}></div>
-      </label>
-      <nav className={s.menu}>
-        <a href="stub.html" className={s.menu__item}>TEXT</a>
-        <a href="stub.html" className={s.menu__item}>TEXT_TEXT</a>
-        <a href="stub.html" className={s.menu__item}>TEXT_TEXT_TEXT</a>
-      </nav>
+      <a href="index.html" className={s.logo}>LOGO</a>
+      <div className={s.background}></div>
+      <Menu items={menuItems} />
     </header>
   )
 }

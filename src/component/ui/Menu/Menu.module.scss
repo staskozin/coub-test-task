@@ -1,0 +1,140 @@
+.button {
+  position: relative;
+  width: 24px;
+  height: 100%;
+  background: none;
+  border: none;
+  height: 100%;
+  padding: 0 20px;
+  cursor: pointer;
+  box-sizing: content-box;
+  z-index: 2;
+
+  &__line {
+    position: absolute;
+    width: 24px;
+    height: 1.5px;
+    background-color: var(--basic-black);
+    transition: transform ease-in-out 0.2s, background-color ease-in-out 0.2s;
+    top: calc(50% - 0.75px);
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 24px;
+      height: 1.5px;
+      background-color: var(--basic-black);
+      transition: transform ease-in-out 0.2s, width ease-in-out 0.2s;
+    }
+
+    &::before {
+      top: calc(50% - 8.75px);
+    }
+
+    &::after {
+      top: calc(50% + 7.25px);
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 66px;
+  left: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  transition: transform ease-in-out 0.3s;
+  transform: translateY(-100%);
+
+  &__item {
+    height: 66px;
+    background-color: var(--basic-white);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--special-grey-2);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--basic-black);
+  }
+}
+
+.toggle {
+  display: none;
+
+  &:checked~.menu {
+    transform: translateX(0%);
+  }
+
+  &:checked~.button {
+    .button__line {
+      background-color: rgba(0, 0, 0, 0);
+
+      &::before {
+        transform: translateY(8px) rotate(45deg);
+        width: 24.75px;
+      }
+
+      &::after {
+        transform: translateY(-8px) rotate(-45deg);
+        width: 24.75px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    display: none;
+  }
+
+  .menu {
+    position: static;
+    display: flex;
+    gap: 45px;
+    flex-grow: 1;
+    justify-content: flex-end;
+    border-bottom: none;
+    transform: none;
+    transition: none;
+    align-self: flex-start;
+
+    &__item {
+      display: inline-block;
+      height: auto;
+      width: auto;
+      border-top: none;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 1.3;
+      padding: 3px 16px 10px;
+      background: none;
+      border-bottom: 2px solid rgba(0, 0, 0, 0);
+      transition: border-color ease-out 0.3s;
+
+      &:hover {
+        border-bottom: 2px solid var(--basic-blue);
+        transition-duration: 0.2s;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .menu {
+    gap: 65px;
+    margin-top: 20px;
+
+    &__item {
+      font-size: 20px;
+      color: var(--basic-white);
+
+      &:hover {
+        border-bottom: 2px solid var(--basic-white);
+      }
+    }
+  }
+}
