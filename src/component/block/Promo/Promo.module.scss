@@ -36,10 +36,10 @@
 @media screen and (min-width: 768px) {
   .promo {
     color: var(--basic-black);
-    padding: 0 23px 0 80px;
+    padding: 0 23px 0 82px;
     align-items: flex-start;
     text-align: left;
-    margin-top: 93px;
+    margin-top: 90px;
 
     &__header {
       font-size: 60px;
@@ -48,6 +48,7 @@
 
     &__text {
       font-size: 20px;
+      padding-left: 6px;
     }
 
     &__img {
@@ -55,7 +56,8 @@
       height: 512px;
       order: 1;
       align-self: flex-end;
-      margin-top: -54px;
+      margin-top: -56px;
+      margin-right: 7px;
     }
 
     &__button {
@@ -70,12 +72,17 @@
 @media screen and (min-width: 1220px) {
   .promo {
     padding: 0 80px;
+    margin-top: 114px;
+
+    &__text {
+      padding-left: 0;
+    }
 
     &__img {
       margin-top: -295px;
-      margin-bottom: -11px;
+      margin-bottom: -10px;
       position: relative;
-      left: 9%;
+      left: 11%;
       align-self: center;
     }
 
