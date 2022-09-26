@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: center;
   aspect-ratio: 1 / 1;
-}
 
-.wrap_round {
-  border-radius: 50%;
+  &_round {
+    border-radius: 50%;
+  }
 }
