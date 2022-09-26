@@ -33,6 +33,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
+    gap: 30px;
   }
 
   .icon-wrap {
@@ -57,5 +58,11 @@
     z-index: -1;
     position: absolute;
     right: 0;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .fact {
+    gap: 0;
   }
 }
