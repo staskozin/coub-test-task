@@ -26,10 +26,10 @@ export default function Header() {
 
   return (
     <header className={s.header}>
-      <Link className={s['logo-icon-wrap']} to="/">
+      <Link className={s['logo-icon-wrap']} to="/" aria-label="Home">
         <img src={Logo} className={s['logo-icon']} alt="LOGO" />
       </Link>
-      <Link to="/" className={s.logo}>LOGO</Link>
+      <Link to="/" className={s.logo} aria-label="Home">LOGO</Link>
       <div className={s.background}></div>
       <Menu items={menuItems} />
     </header>

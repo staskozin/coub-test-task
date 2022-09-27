@@ -6,7 +6,7 @@ export default function Fact(props: FactProps) {
     <li className={s.fact}>
       <Icon name={props.icon} wrapClassName={s['icon-wrap']} iconClassName={s.icon} />
       <p className={s.text}>{props.text}</p>
-      <span className={s.number}>{props.number}</span>
+      <span aria-hidden className={s.number}>{props.number}</span>
     </li>
   )
 }

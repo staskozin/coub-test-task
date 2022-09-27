@@ -2,7 +2,7 @@ import s from './Icon.module.scss'
 
 export default function Icon(props: IconProps) {
   return (
-    <div className={`${s.wrap} ${props.round ? s.wrap_round : ''} ${props.wrapClassName ? props.wrapClassName : ''}`}>
+    <div aria-hidden className={`${s.wrap} ${props.round ? s.wrap_round : ''} ${props.wrapClassName ? props.wrapClassName : ''}`}>
       <img
         src={props.name}
         alt={props.alt !== undefined ? props.alt : ''}
