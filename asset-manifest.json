@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/coub-test-task/static/css/main.a14269f0.css",
-    "main.js": "/coub-test-task/static/js/main.4ca690ba.js",
+    "main.js": "/coub-test-task/static/js/main.bd7b8613.js",
     "static/media/Oswald-Medium.ttf": "/coub-test-task/static/media/Oswald-Medium.292bdf409c7b9c1c5683.ttf",
     "static/media/Oswald-Regular.ttf": "/coub-test-task/static/media/Oswald-Regular.e815068d369177121fd8.ttf",
     "static/media/art.png": "/coub-test-task/static/media/art.7999913b7590126162f1.png",
     "index.html": "/coub-test-task/index.html",
     "main.a14269f0.css.map": "/coub-test-task/static/css/main.a14269f0.css.map",
-    "main.4ca690ba.js.map": "/coub-test-task/static/js/main.4ca690ba.js.map"
+    "main.bd7b8613.js.map": "/coub-test-task/static/js/main.bd7b8613.js.map"
   },
   "entrypoints": [
     "static/css/main.a14269f0.css",
-    "static/js/main.4ca690ba.js"
+    "static/js/main.bd7b8613.js"
   ]
 }
