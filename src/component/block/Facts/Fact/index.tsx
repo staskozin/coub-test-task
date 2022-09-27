@@ -13,6 +13,6 @@ export default function Fact(props: FactProps) {
 
 type FactProps = {
   text: string
-  icon: 'checklist' | 'document' | 'gears' | 'handshake'
+  icon: string
   number: number
 }

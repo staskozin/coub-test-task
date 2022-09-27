@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import Menu, { MenuItem } from '../../ui/Menu'
 import s from './Header.module.scss'
 
+import Logo from '../../../img/logo.png'
+
 export default function Header() {
   const menuItems: Array<MenuItem> = [
     {
@@ -25,7 +27,7 @@ export default function Header() {
   return (
     <header className={s.header}>
       <Link className={s['logo-icon-wrap']} to="/">
-        <img src="img/logo.png" className={s['logo-icon']} alt="LOGO" />
+        <img src={Logo} className={s['logo-icon']} alt="LOGO" />
       </Link>
       <Link to="/" className={s.logo}>LOGO</Link>
       <div className={s.background}></div>

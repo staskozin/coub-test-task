@@ -4,8 +4,8 @@ export default function Icon(props: IconProps) {
   return (
     <div className={`${s.wrap} ${props.round ? s.wrap_round : ''} ${props.wrapClassName ? props.wrapClassName : ''}`}>
       <img
-        src={`img/${props.name}.png`}
-        alt={props.name}
+        src={props.name}
+        alt={props.alt !== undefined ? props.alt : ''}
         className={props.iconClassName ? props.iconClassName : ''}
       />
     </div>
@@ -17,4 +17,5 @@ type IconProps = {
   wrapClassName?: string
   iconClassName?: string
   round?: boolean
+  alt?: string
 }

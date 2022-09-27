@@ -33,5 +33,5 @@ type ArticleProps = {
   title: string
   text: string
   href: string
-  icon: 'earth' | 'lamp'
+  icon: string
 }
