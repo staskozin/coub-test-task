@@ -8,13 +8,13 @@ export default function News() {
         title="TEXT_TEXT"
         text="TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT"
         icon="lamp"
-        href="stub.html"
+        href="/stub"
       />
       <Article
         title="TEXT_TEXT"
         text="TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT"
         icon="earth"
-        href="stub.html"
+        href="/stub"
       />
     </div>
   )

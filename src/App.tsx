@@ -1,27 +1,15 @@
-import Container from './component/ui/Container'
-import Header from './component/block/Header'
-import Promo from './component/block/Promo'
-import News from './component/block/News'
-import Facts from './component/block/Facts'
-import Footer from './component/block/Footer'
+import { Routes, Route } from 'react-router-dom'
+
+import Home from './component/page/Home'
+import Stub from './component/page/Stub'
 
 function App() {
   return (
-    <>
-      <Container block='top'>
-        <Header />
-        <Promo />
-      </Container>
-      <Container block='news'>
-        <News />
-      </Container>
-      <Container block='facts'>
-        <Facts />
-      </Container>
-      <Container block='footer'>
-        <Footer />
-      </Container>
-    </>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/stub' element={<Stub />} />
+      <Route path='*' element={<Home />} />
+    </Routes>
   )
 }
 

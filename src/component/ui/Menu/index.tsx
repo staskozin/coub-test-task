@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import s from './Menu.module.scss'
 
 export default function Menu(props: MenuProps) {
@@ -9,7 +11,7 @@ export default function Menu(props: MenuProps) {
       </label>
       <nav className={s.menu}>
         {props.items.map(item => {
-          return <a href={item.href} className={s.menu__item} key={item.id}>{item.text}</a>
+          return <Link to={item.href} className={s.menu__item} key={item.id}>{item.text}</Link>
         })}
       </nav>
     </>
