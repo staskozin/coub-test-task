@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/coub-test-task/static/css/main.a14269f0.css",
-    "main.js": "/coub-test-task/static/js/main.71576c75.js",
+    "main.js": "/coub-test-task/static/js/main.5deffcbc.js",
     "static/media/Oswald-Medium.ttf": "/coub-test-task/static/media/Oswald-Medium.292bdf409c7b9c1c5683.ttf",
     "static/media/Oswald-Regular.ttf": "/coub-test-task/static/media/Oswald-Regular.e815068d369177121fd8.ttf",
     "index.html": "/coub-test-task/index.html",
     "main.a14269f0.css.map": "/coub-test-task/static/css/main.a14269f0.css.map",
-    "main.71576c75.js.map": "/coub-test-task/static/js/main.71576c75.js.map"
+    "main.5deffcbc.js.map": "/coub-test-task/static/js/main.5deffcbc.js.map"
   },
   "entrypoints": [
     "static/css/main.a14269f0.css",
-    "static/js/main.71576c75.js"
+    "static/js/main.5deffcbc.js"
   ]
 }
